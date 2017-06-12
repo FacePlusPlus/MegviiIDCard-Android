@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/load_rootRel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="30dip"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/loading_layout_contentRel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/loading_layout_isVerticalBtn"
+            android:layout_width="85dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dip"
+            android:background="@drawable/btn_backselect"
+            android:text="horizontal"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:visibility="visible" />
+        <Button
+            android:id="@+id/loading_layout_filterBtn"
+            android:layout_width="85dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dip"
+            android:layout_below="@+id/loading_layout_isVerticalBtn"
+            android:background="@drawable/btn_backselect"
+            android:text="no filter"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="120dip"
+            android:layout_margin="5dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="clear:        "
+                    android:textColor="#aa000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/load_clearEdit"
+                    android:layout_width="80dip"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="0.9"
+                    android:textColor="#aa000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="is_idcard: "
+                    android:textColor="#aa000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/load_idcardEdit"
+                    android:layout_width="80dip"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="0.5"
+                    android:textColor="#aa000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="is_bound: "
+                    android:textColor="#aa000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/load_boundEdit"
+                    android:layout_width="80dip"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="0.8"
+                    android:textColor="#aa000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loading_layout_btnLinear"
+            android:layout_width="300dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/loading_front"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="100dip"
+                android:background="@drawable/btn_backselect"
+                android:text="识别身份证"
+                android:textColor="#ffffffff"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/loading_back"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="25dip"
+                android:background="@drawable/btn_backselect"
+                android:text="反面"
+                android:textColor="#ffffffff"
+                android:textSize="22sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/loading_layout_barLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/loading_layout_WarrantyBar"
+            android:layout_width="30dip"
+            android:layout_height="30dip" />
+
+        <TextView
+            android:id="@+id/loading_layout_WarrantyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dip"
+            android:layout_marginTop="10dip"
+            android:text="正在联网授权中..."
+            android:textColor="#4FA1B7"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loading_layout_againWarrantyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@+id/loading_layout_barLinear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="45dip"
+        android:layout_marginRight="45dip"
+        android:layout_marginTop="120dip"
+        android:background="@drawable/btn_backselect"
+        android:text="重新联网授权"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

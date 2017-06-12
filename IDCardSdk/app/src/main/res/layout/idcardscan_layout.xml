@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.megvii.idcard.sdk.IDCardScanActivity" >
+
+    <TextureView
+        android:id="@+id/idcardscan_layout_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.megvii.idcard.sdk.util.IDCardIndicator
+        android:id="@+id/idcardscan_layout_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/idcardscan_layout_fps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#00ff00"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/idcardscan_layout_fps_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idcardscan_layout_fps"
+        android:textColor="#00ff00"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/idcardscan_layout_error_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dip"
+        android:text=""
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/idcardscan_layout_verticalerror_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dip"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="#ffffffff"
+        android:visibility="gone" />
+
+    <com.megvii.idcard.sdk.util.MyTextView
+        android:id="@+id/idcardscan_layout_topTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="#7f000000"
+        android:text="是四个能力考试呢是四个能力考试呢"
+        android:textColor="#ffffffff"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="200dip"
+        android:layout_height="200dip" />
+
+    <RelativeLayout
+        android:id="@+id/idcard_layout_barRel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#22000000"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

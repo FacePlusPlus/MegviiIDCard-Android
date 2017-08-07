@@ -32,7 +32,7 @@ public class IDCard {
 		return errorType;
 	}
 
-	public IDCardConfig getFaceppConfig() {
+	public IDCardConfig getIdCardConfig() {
 		float[] configs = IDCardApi.nativeGetIDCardConfig(IDCardHandle);
 		IDCardConfig idCardConfig = new IDCardConfig();
 		idCardConfig.orientation = (int) configs[0];
@@ -52,7 +52,7 @@ public class IDCard {
 		return idCardConfig;
 	}
 
-	public void setFaceppConfig(IDCardConfig idCardConfig) {
+	public void setIdCardConfig(IDCardConfig idCardConfig) {
 		IDCardApi.nativeSetIDCardConfig(IDCardHandle, idCardConfig.orientation, idCardConfig.shadowAreaTh,
 				idCardConfig.faculaAreaTh, idCardConfig.cardAreaTh, idCardConfig.shadowConfirmTh,
 				idCardConfig.faculaActivatedTh, idCardConfig.faculaConfirmTh, idCardConfig.roi_left,
@@ -60,7 +60,7 @@ public class IDCard {
 	}
 
 	public IDCardDetect detect(byte[] imageData, int width, int height, int imageMode) {
-//		getFaceppConfig();
+//		getIdCardConfig();
 		IDCardDetect idCardDetect = new IDCardDetect();
 		float[] datas = IDCardApi.nativeDetect(IDCardHandle, imageData, width, height, imageMode);
 		idCardDetect.inBound = datas[0];

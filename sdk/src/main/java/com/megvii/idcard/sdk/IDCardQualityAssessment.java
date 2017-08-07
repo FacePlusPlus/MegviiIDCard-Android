@@ -80,7 +80,7 @@ public class IDCardQualityAssessment {
 	public void setConfig(int width, int height, RectF roi, int orientation, boolean isVertical) {
 		this.mRoi = roi;
 		this.orientation = orientation;
-		IDCardConfig idCardConfig = mIdCard.getFaceppConfig();
+		IDCardConfig idCardConfig = mIdCard.getIdCardConfig();
 
 		int left = (int) (width * roi.left);
 		int top = (int) (height * roi.top);
@@ -109,7 +109,7 @@ public class IDCardQualityAssessment {
 		else
 			idCardConfig.need_filter = 0;
 
-		mIdCard.setFaceppConfig(idCardConfig);
+		mIdCard.setIdCardConfig(idCardConfig);
 	}
 
 	public void release() {

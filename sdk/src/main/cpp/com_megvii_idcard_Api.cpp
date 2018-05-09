@@ -56,7 +56,7 @@ jlong Java_com_megvii_idcard_sdk_jni_IDCardApi_nativeInit(JNIEnv *env, jobject,
 	long model_len = env->GetArrayLength(model);
 
 	ApiHandle *h = new ApiHandle();
-	int retcode = mg_idcard.CreateApiHandle(env, context,
+	int retcode = mg_idcard.CreateApiHandle(
 			reinterpret_cast<const MG_BYTE*>(model_data), model_len, &h->api);
 	if (retcode != 0) {
 		return retcode;
@@ -273,7 +273,7 @@ void Java_com_megvii_idcard_sdk_jni_IDCardApi_nativeRelease(JNIEnv *, jobject,
 
 jlong Java_com_megvii_idcard_sdk_jni_IDCardApi_nativeGetApiExpication(
 		JNIEnv *env, jobject, jobject ctx) {
-	return (long) mg_idcard.GetApiExpiration(env, ctx);
+	return (long) mg_idcard.GetApiExpiration();
 }
 
 jstring Java_com_megvii_idcard_sdk_jni_IDCardApi_nativeGetVersion(JNIEnv *env,

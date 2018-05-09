@@ -59,18 +59,18 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 
 
         final LicenseManager licenseManager = new LicenseManager(this);
-        licenseManager.setExpirationMillis(IDCard.getApiExpication(this) * 1000);
+//        licenseManager.setExpirationMillis(IDCard.getApiExpication(this) * 1000);
         // licenseManager.setAgainRequestTime(againRequestTime);
 
         String uuid = ConUtil.getUUIDString(LoadingActivity.this);
         long apiName = IDCard.getApiName();
-        String content = licenseManager.getContext(uuid, LicenseManager.DURATION_365DAYS, apiName);
+//        String content = licenseManager.getContext(uuid, LicenseManager.DURATION_365DAYS, apiName);
 
-        String errorStr = licenseManager.getLastError();
-        Log.w("ceshi", "getContent++++errorStr===" + errorStr);
+//        String errorStr = licenseManager.getLastError();
+//        Log.w("ceshi", "getContent++++errorStr===" + errorStr);
 
-        licenseManager.takeLicenseFromNetwork(uuid, KeyUtil.API_KEY, KeyUtil.API_SECRET, apiName,
-                1, "IDCard", "1", true, new LicenseManager.TakeLicenseCallback() {
+        licenseManager.takeLicenseFromNetwork(KeyUtil.CN_LICENSE_URL,uuid, KeyUtil.API_KEY, KeyUtil.API_SECRET, apiName,
+                "1", new LicenseManager.TakeLicenseCallback() {
                     @Override
                     public void onSuccess() {
                         authState(true);

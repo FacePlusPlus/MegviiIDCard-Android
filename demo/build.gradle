@@ -18,6 +18,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
 dependencies {
@@ -27,7 +32,9 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
-    compile 'com.github.FacePlusPlus:MegviiLicMgr-Android-SDK:0.3.0'
+//    compile 'com.github.FacePlusPlus:MegviiLicMgr-Android-SDK:0.3.0'
+    compile(name: 'MGLicenseManagerSDK-0.3.1', ext: 'aar')
+
     compile project(':sdk')
 //    compile 'com.github.FacePlusPlus:MegviiIDCard-Android:3.0'
     compile 'com.loopj.android:android-async-http:1.4.9'

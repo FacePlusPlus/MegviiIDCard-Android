@@ -8,8 +8,11 @@ import java.io.InputStream;
 
 public class KeyUtil {
 
-    public static String API_KEY;
-    public static String API_SECRET;
+    public static String CN_LICENSE_URL = "https://api-cn.faceplusplus.com/sdk/v3/auth";
+    public static String US_LICENSE_URL = "https://api-us.faceplusplus.com/sdk/v3/auth";
+
+    public static String API_KEY="cFWkwe3Ypq6SV_n8I1alh97z4R0jgKLV";
+    public static String API_SECRET="NI2rBPEqnjDL7V054LRZbcs5AjnjVk9v";
 
     public static boolean isReadKey(Context context) {
         InputStream inputStream = null;
